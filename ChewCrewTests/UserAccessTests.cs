@@ -53,7 +53,16 @@ namespace ChewCrewTests
             userAccess.CanAddRestaurant().Should().BeFalse();
         }
 
-        // Testing private testing Mock methods
+        [TestMethod]
+        public void CanRateRestaurant_DefaultUser_ReturnsTrue()
+        {
+            var principal = CreateMockPrinciple();
+            var userAccess = new UserAccess(principal.Object);
+
+            userAccess.CanRateRestaurant().Should().BeTrue();
+        }
+
+        #region Private Mocking Functions and Tests
 
         [TestMethod]
         public void AddRole_RoleHasBeenAdded_ReturnsTrue()
@@ -100,5 +109,6 @@ namespace ChewCrewTests
 
             return principal;
         }
+        #endregion
     }
 }

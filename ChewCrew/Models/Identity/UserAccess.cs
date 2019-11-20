@@ -1,4 +1,5 @@
-﻿using ChewCrew.Interfaces;
+﻿using ChewCrew.Helpers;
+using ChewCrew.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace ChewCrew.Models.Identity
 
         public bool CanAddRestaurant()
         {
-            return _principal.IsInRole("GroupAdmin") || _principal.IsInRole("SuperAdmin");
+            return _principal.IsInRole(ChewCrewRoles.GroupAdmin) || _principal.IsInRole(ChewCrewRoles.SuperAdmin);
         }
 
         public bool CanEliminateRestaurantSuggestions()

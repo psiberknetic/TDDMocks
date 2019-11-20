@@ -35,7 +35,7 @@ namespace ChewCrew.Models.Identity
 
         public bool CanRateRestaurant()
         {
-            throw new NotImplementedException();
+            return true;
         }
 
         public bool CanSuggestRestaurants()

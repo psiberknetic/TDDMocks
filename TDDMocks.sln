@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChewCrew", "ChewCrew\ChewCrew.csproj", "{8017D32D-F273-4F3E-999D-1287305531DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChewCrewTests", "ChewCrewTests\ChewCrewTests.csproj", "{7BE3497A-2CC3-451E-96E5-218480E494D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8017D32D-F273-4F3E-999D-1287305531DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8017D32D-F273-4F3E-999D-1287305531DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8017D32D-F273-4F3E-999D-1287305531DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8017D32D-F273-4F3E-999D-1287305531DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BE3497A-2CC3-451E-96E5-218480E494D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BE3497A-2CC3-451E-96E5-218480E494D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BE3497A-2CC3-451E-96E5-218480E494D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BE3497A-2CC3-451E-96E5-218480E494D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0882E22-431D-4954-B2F9-7806D30449BF}
+	EndGlobalSection
+EndGlobal

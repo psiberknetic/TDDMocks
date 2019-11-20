@@ -15,12 +15,13 @@ namespace ChewCrew.Areas.Identity
     {
         public void Configure(IWebHostBuilder builder)
         {
-            builder.ConfigureServices((context, services) => {
+            builder.ConfigureServices((context, services) =>
+            {
                 services.AddDbContext<ChewCrewContext>(options =>
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("ChewCrewContextConnection")));
 
-                services.AddDefaultIdentity<ChewCrewUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                services.AddIdentityCore<ChewCrewUser>(options => options.SignIn.RequireConfirmedAccount = true)
                     .AddEntityFrameworkStores<ChewCrewContext>();
             });
         }

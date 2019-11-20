@@ -19,7 +19,7 @@ namespace ChewCrew.Models.Identity
 
         public bool CanAddRestaurant()
         {
-            throw new NotImplementedException();
+            return _principal.IsInRole("GroupAdmin") || _principal.IsInRole("SuperAdmin");
         }
 
         public bool CanEliminateRestaurantSuggestions()

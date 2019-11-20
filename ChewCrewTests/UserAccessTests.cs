@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using ChewCrew.Models.Identity;
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
@@ -16,9 +17,43 @@ namespace ChewCrewTests
         private static string _GroupAdmin = "GroupAdmin";
 
         [TestMethod]
+        public void CanAddRestaurant_UserIsSuperAdmin_ReturnsTrue()
+        {
+            var principal = CreateMockPrinciple();
+            AddRole(principal, _SuperAdmin);
+            var userAccess = new UserAccess(principal.Object);
+
+            userAccess.CanAddRestaurant().Should().BeTrue();
+        }
+
+        [TestMethod]
         public void CanAddRestaurant_UserIsGroupAdmin_ReturnsTrue()
         {
+            var principal = CreateMockPrinciple();
+            AddRole(principal, _GroupAdmin);
+            var userAccess = new UserAccess(principal.Object);
 
+            userAccess.CanAddRestaurant().Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void CanAddRestaurant_UserIsGroupAndSuperAdmin_ReturnsTrue()
+        {
+            var principal = CreateMockPrinciple();
+            AddRole(principal, _GroupAdmin);
+            AddRole(principal, _SuperAdmin);
+            var userAccess = new UserAccess(principal.Object);
+
+            userAccess.CanAddRestaurant().Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void CanAddRestaurant_DefaultUser_ReturnsFalse()
+        {
+            var principal = CreateMockPrinciple();
+            var userAccess = new UserAccess(principal.Object);
+
+            userAccess.CanAddRestaurant().Should().BeFalse();
         }
 
         // Testing private testing Mock methods

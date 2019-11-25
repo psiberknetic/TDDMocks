@@ -21,7 +21,7 @@ namespace ChewCrew.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("ChewCrewContextConnection")));
 
-                services.AddIdentityCore<ChewCrewUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                services.AddDefaultIdentity<ChewCrewUser>(options => options.SignIn.RequireConfirmedAccount = true)
                     .AddEntityFrameworkStores<ChewCrewContext>();
             });
         }

@@ -5,6 +5,10 @@
         <UserSecretsId>aspnet-ChewCrew-CE0B4FC4-249D-41BE-B0A1-5491A99C54C2</UserSecretsId>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Compile Remove="Data\ApplicationDbContext.cs" />
+    </ItemGroup>
+
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.0.0" />

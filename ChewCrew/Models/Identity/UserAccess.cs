@@ -11,9 +11,9 @@ namespace ChewCrew.Models.Identity
 {
     public class UserAccess : IUserAccess
     {
-        private readonly IPrincipal _principal;
+        private readonly ClaimsPrincipal _principal;
 
-        public UserAccess(IPrincipal principal)
+        public UserAccess(ClaimsPrincipal principal)
         {
             _principal = principal;
         }
